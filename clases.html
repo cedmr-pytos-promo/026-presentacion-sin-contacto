@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de clases — Presentación Digital Sin Contacto</title>
+    <link rel="stylesheet" href="prueba.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos exclusivos de esta página de detalle (mismos que der.html), no tocan el CSS principal */
+        .der-header{
+            padding: 60px 30px 30px 30px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .der-header h1{
+            margin-bottom: 10px;
+        }
+        .volver{
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #3e03e1;
+            font-family: sans-serif;
+            font-weight: bold;
+            background-color: rgba(200, 200, 200, 0.4);
+            border-radius: 7px;
+            padding: 2%;
+        }
+        .der-contenido{
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 30px 60px 30px;
+            display: flex;
+            flex-direction:column;
+        }
+        .der-contenido h2{
+            font-family: sans-serif;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .der-contenido p{
+            font-family: Poppins;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .der-diagrama{
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .ejemplo-relacion{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-left: 15px;
+            font-family: Poppins;
+            font-size: 0.85em;
+        }
+        .ejemplo-relacion .dato{
+            background-color: rgba(140, 3, 225, 0.1);
+            padding: 6px 12px;
+            border-radius: 8px;
+        }
+        .ejemplo-relacion .flecha{
+            color: #6c02a2;
+            font-weight: bold;
+        }
+        /* Nuevo en esta página: archivo donde vive cada clase */
+        .archivo{
+            font-size: 0.8em;
+            opacity: 0.75;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <nav class="navegadores">
+                <a href="index.html#descripcion"><img src="imagenes/logo-menu.jpeg" class="logo-menu" alt="Logo del proyecto"></a>
+                <a href="index.html#Diagrama-UML" class="enlaces-de-navegacion">Diagrama UML</a>
+                <a href="index.html#Manual-Usuario" class="enlaces-de-navegacion">Manual de usuario</a>
+                <a href="index.html#Manual-programacion" class="enlaces-de-navegacion">Manual de Programación</a>
+                <a href="index.html#Evidencias" class="enlaces-de-navegacion">Galería de Evidencia</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="der-header">
+        <a href="index.html#Diagrama-UML" class="volver">&larr; Volver al inicio</a>
+        <h1>Diagrama de clases</h1>
+        <p style="font-family: Poppins; max-width: 700px; margin: 0 auto;">Cómo está organizado el programa por dentro: qué clases lo forman, qué guarda cada una y cómo se conectan entre sí.</p>
+    </div>
+
+    <div class="der-contenido">
+
+        <h2>Conceptos previos</h2>
+        <p>Antes de ver el diagrama, tres ideas para poder leerlo:</p>
+        <div class="Ayudas">
+            <h3>Clase</h3>
+            <p>Es un molde que agrupa datos y acciones relacionadas. En el diagrama cada clase es una caja con tres partes: el nombre, los <strong>atributos</strong> (los datos que guarda) y los <strong>métodos</strong> (lo que sabe hacer). El signo <code style="display:inline; padding:2px 6px;">+</code> indica que se usa desde afuera y el signo <code style="display:inline; padding:2px 6px;">-</code> que es de uso interno.</p>
+        </div>
+        <div class="Ayudas">
+            <h3>Relaciones y multiplicidad</h3>
+            <p>Las líneas muestran cómo se conectan las clases. Una línea simple es una <strong>asociación</strong> (una clase usa a la otra). La línea con un rombo relleno es una <strong>composición</strong> (una clase contiene a la otra y la crea). Los números en los extremos indican cuántos objetos participan: <code style="display:inline; padding:2px 6px;">1</code> es exactamente uno y <code style="display:inline; padding:2px 6px;">0..1</code> es ninguno o uno.</p>
+        </div>
+        <div class="Ayudas">
+            <h3>Tipos entre « »</h3>
+            <p>Las palabras entre comillas angulares aclaran qué tipo de elemento es. Por ejemplo, <code style="display:inline; padding:2px 6px;">«Enum»</code> es una lista de valores fijos, <code style="display:inline; padding:2px 6px;">«dataclass»</code> es una clase que solo guarda datos y <code style="display:inline; padding:2px 6px;">«módulo»</code> es un archivo con funciones sueltas, sin clase.</p>
+        </div>
+
+        <img src="imagenes/diagrama-clases.png" alt="Diagrama de clases del sistema: MainWindow, ControlPage, DetectionWorker, Camera, GestureDetector, DetectionResult, Gesture y keyboard_actions, con sus atributos, métodos y relaciones" class="der-diagrama">
+        <p style="font-size: 0.85em; opacity: 0.75; text-align: center;">Las clases del programa y sus relaciones. Los nombres son los mismos que en el código fuente.</p>
+
+        <h2 id="clases">Las clases del sistema</h2>
+        <p>Cada clase tiene una sola responsabilidad. Así, si algo falla, se sabe en qué archivo buscar.</p>
+
+        <div class="Ayudas">
+            <h3>MainWindow</h3>
+            <p class="archivo">app/ui/main_window.py</p>
+            <p>Es la ventana principal. Tiene una barra lateral con cuatro secciones (Inicio, Control por gestos, Manual de usuario y Créditos) y cambia entre ellas. Al cerrar la ventana, le pide a <strong>ControlPage</strong> que apague la cámara.</p>
+        </div>
+        <div class="Ayudas">
+            <h3>ControlPage</h3>
+            <p class="archivo">app/ui/control_page.py</p>
+            <p>Es la pantalla «Control por gestos». Muestra la vista previa de la cámara y los botones para iniciar o detener la detección y para mostrar u ocultar la imagen. Al iniciar, crea el <strong>DetectionWorker</strong>, y al detener, lo apaga.</p>
+        </div>
+        <div class="Ayudas">
+            <h3>DetectionWorker</h3>
+            <p class="archivo">app/detection_worker.py</p>
+            <p>Es el que hace el trabajo pesado en segundo plano, en un hilo aparte (<code style="display:inline; padding:2px 6px;">QThread</code>), para que la ventana no se trabe. Repite sin parar: lee una imagen de la <strong>Camera</strong>, se la pasa al <strong>GestureDetector</strong> y, si se reconoce un gesto, llama a <strong>keyboard_actions</strong>. También avisa a la ventana, mediante señales, si hay mano, qué gesto se hizo y si hubo un error.</p>
+        </div>
+        <div class="Ayudas">
+            <h3>Camera</h3>
+            <p class="archivo">app/camera.py</p>
+            <p>Se encarga de la cámara web usando OpenCV. Sabe abrirla (<code style="display:inline; padding:2px 6px;">open</code>), leer una imagen (<code style="display:inline; padding:2px 6px;">read</code>) y liberarla (<code style="display:inline; padding:2px 6px;">release</code>). Si no puede abrirla o leerla, lanza el error <strong>CameraError</strong> con un mensaje que explica qué revisar.</p>
+        </div>
+        <div class="Ayudas">
+            <h3>GestureDetector</h3>
+            <p class="archivo">app/gesture_detector.py</p>
+            <p>Usa MediaPipe para ubicar los puntos de la mano en la imagen. Mide la distancia entre la punta del pulgar y la del índice, y entre el pulgar y el medio. Si los dedos se unen, decide qué gesto es. Cada gesto se dispara una sola vez al juntar los dedos, y hay una pausa corta entre un gesto y el siguiente para evitar repeticiones. El resultado se entrega como un <strong>DetectionResult</strong>.</p>
+        </div>
+        <div class="Ayudas">
+            <h3>DetectionResult</h3>
+            <p class="archivo">app/gesture_detector.py</p>
+            <p>Es la respuesta del detector para cada imagen. Guarda solo dos datos: si se detectó una mano (<code style="display:inline; padding:2px 6px;">hand_detected</code>) y qué gesto debe ejecutarse en ese momento (<code style="display:inline; padding:2px 6px;">gesture</code>, que puede estar vacío).</p>
+        </div>
+        <div class="Ayudas">
+            <h3>Gesture</h3>
+            <p class="archivo">app/gesture_detector.py</p>
+            <p>Es la lista de los gestos que reconoce el sistema. Hay dos: <code style="display:inline; padding:2px 6px;">NEXT</code> (pulgar + índice, pulsa la flecha derecha para avanzar) y <code style="display:inline; padding:2px 6px;">PREVIOUS</code> (pulgar + dedo medio, pulsa la flecha izquierda para retroceder). Cada gesto guarda su tecla y el texto que se muestra en pantalla.</p>
+        </div>
+        <div class="Ayudas">
+            <h3>keyboard_actions</h3>
+            <p class="archivo">app/keyboard_actions.py</p>
+            <p>No es una clase sino un módulo con una función, <code style="display:inline; padding:2px 6px;">press_gesture_key</code>. Con la librería PyAutoGUI pulsa la tecla del gesto en la ventana que esté activa, por ejemplo, la presentación abierta en pantalla.</p>
+        </div>
+
+        <h2>Cómo trabajan juntas</h2>
+        <p style="font-size: 1em; margin-left: 15px; text-align: left;">Así viaja la información desde que el usuario hace un gesto hasta que cambia la diapositiva:</p>
+        <div class="ejemplo-relacion">
+            <span class="dato">Camera: lee la imagen</span>
+            <span class="flecha">&rarr;</span>
+            <span class="dato">GestureDetector: reconoce Gesture.NEXT</span>
+            <span class="flecha">&rarr;</span>
+            <span class="dato">DetectionWorker: avisa y llama</span>
+            <span class="flecha">&rarr;</span>
+            <span class="dato">keyboard_actions: pulsa la flecha derecha</span>
+        </div>
+
+        <div style="text-align: center; margin-top: 15px;">
+            <a href="index.html#Diagrama-UML" class="volver">&larr; Volver al inicio</a>
+        </div>
+    </div>
+</body>
+</html>

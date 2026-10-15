@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DER como diagrama de datos — Presentación Digital Sin Contacto</title>
+    <link rel="stylesheet" href="/prueba.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos exclusivos de esta página de detalle, no tocan el CSS principal */
+        .der-header{
+            padding: 60px 30px 30px 30px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .der-header h1{
+            margin-bottom: 10px;
+        }
+        .volver{
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #3e03e1;
+            font-family: sans-serif;
+            font-weight: bold;
+            background-color: rgba(200, 200, 200, 0.4);
+            border-radius: 7px;
+            padding: 2%;
+        }
+        .der-contenido{
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 30px 60px 30px;
+            display: flex;
+            flex-direction:column;
+        }
+        .der-contenido h2{
+            font-family: sans-serif;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .der-contenido p{
+            font-family: Poppins;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .der-diagrama{
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .ejemplo-relacion{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-left: 15px;
+            font-family: Poppins;
+            font-size: 0.85em;
+        }
+        .ejemplo-relacion .dato{
+            background-color: rgba(140, 3, 225, 0.1);
+            padding: 6px 12px;
+            border-radius: 8px;
+        }
+        .ejemplo-relacion .flecha{
+            color: #6c02a2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <nav class="navegadores">
+                <a href="/prueba.html#descripcion"><img src="/imagenes/logo-menu.jpeg" class="logo-menu"></a>
+                <a href="/prueba.html#Diagrama-UML" class="enlaces-de-navegacion">Diagrama UML</a>
+                <a href="/prueba.html#Manual-Usuario" class="enlaces-de-navegacion">Manual de usuario</a>
+                <a href="/prueba.html#Manual-programacion" class="enlaces-de-navegacion">Manual de Programación</a>
+                <a href="/prueba.html#Evidencias" class="enlaces-de-navegacion">Galería de Evidencia</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="der-header">
+        <a href="/prueba.html#Diagrama-UML" class="volver">&larr; Volver al inicio</a>
+        <h1>DER como diagrama de datos</h1>
+        <p style="font-family: Poppins; max-width: 700px; margin: 0 auto;">Estructura de la base de datos que relaciona los gestos detectados con las acciones que ejecutan sobre la presentación.</p>
+    </div>
+
+    <div class="der-contenido">
+
+        <h2>Conceptos previos</h2>
+        <p>Antes de ver las tablas, dos conceptos que usa el sistema para reconocer gestos:</p>
+        <div class="Ayudas">
+            <h3>Landmarks</h3>
+            <p>Puntos clave que MediaPipe detecta en la mano. Cada mano tiene 21 puntos numerados: 4 = pulgar, 8 = índice, 12 = medio, 16 = anular, 20 = meñique.</p>
+        </div>
+        <div class="Ayudas">
+            <h3>Patrón de detección</h3>
+            <p>Regla basada en la distancia entre landmarks. Por ejemplo, <code style="display:inline; padding:2px 6px;">DIST(4,8) &lt; 40</code> reconoce el gesto pulgar-índice.</p>
+        </div>
+
+        <img src="/imagenes/diagrama-der.png" alt="Diagrama entidad-relación completo: tablas GESTOS, CONFIGURACIONES, ACCIONES y la tabla de relación CONFIGURACIONES_GESTOS_ACCIONES" class="der-diagrama">
+        <p style="font-size: 0.85em; opacity: 0.75; text-align: center;">Tabla de relación que une gestos, acciones y configuraciones (relación muchos a muchos).</p>
+
+        <p style="font-size: 1 em; margin-top: 8px; margin-left: 15px;">Esta tabla es la que conecta a las otras tres. Por ejemplo, así queda relacionado un gesto real dentro del sistema:</p>
+        <div class="ejemplo-relacion">
+            <span class="dato">Configuración: Modo Presentación</span>
+            <span class="flecha">&rarr;</span>
+            <span class="dato">Gesto: Pulgar + Índice</span>
+            <span class="flecha">&rarr;</span>
+            <span class="dato">Acción: Diapositiva siguiente</span>
+        </div>
+
+        <div style="text-align: center; margin-top: 15px;">
+            <a href="/prueba.html#Diagrama-UML" class="volver">&larr; Volver al inicio</a>
+        </div>
+    </div>
+</body>
+</html>
