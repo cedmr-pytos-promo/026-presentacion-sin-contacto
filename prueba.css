@@ -1,0 +1,526 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;/* es lo que hace es me no deja ni un espacio, para que yo decida cuanto espacio hay en todo*/
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    
+}
+.iconos{
+    width: 47px;
+    height: auto;
+    cursor: pointer;/*para que apararesca la manita del cursor*/
+    transition: transform 0.4s ease;
+    padding-top: 10px;
+}
+.iconos:hover{
+    transform: scale(1.1);
+}
+header{
+    background-color: #fffffff8;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /*el ttop: 0; , osition: sticky; , z-index: 10; son obligatorios para que al hacer el scroll no desaparesca el Header y se quede ahi */
+}
+.logo-menu{
+    transition: transform 0.4s ease;
+    border-radius: 12px;
+    width:50px ;
+    height: 50px;
+}
+.logo-menu:hover{
+    transform: scale(1.3);
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.navegadores{
+    padding:  1px 30px;
+    font-size: 1.15em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: sans-serif;
+    gap: 40px;
+}
+.enlaces-de-navegacion{
+    text-decoration: none;
+    color: black;
+    margin-top: 17px;
+    padding-bottom: 5px;
+    padding-top: 3px;
+}
+.enlaces-de-navegacion:hover{
+    background: linear-gradient(250deg,#000f9aaf, #3e03e1,#7d21f5);
+    border-radius: 10px;
+    color:#ffffff
+}
+/*otra SECCION---------------------------------------------------------------------------------------------------------------------------------------------*/
+#descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#ffffff;
+    height: 90vh;/*se adapta a tu pantalla y dice que va a ocupar el 90% de tu pantalla*/
+    padding: 20px;
+    background-image: linear-gradient(
+        0deg , 
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("imagenes/logo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+#descripcion h1{
+    text-shadow: 2px 2px 5px;
+    
+}
+#descripcion p{
+    text-shadow: 1px 1px 1px black;
+    font-family: Poppins, sans-serif;
+    max-width: 800px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+.descripcion-datos{
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dato-descripcion{
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 12px 20px;
+}
+.dato-descripcion h4{
+    font-family: sans-serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+.dato-descripcion p{
+    font-family: Poppins;
+    font-size: 1em;
+    margin-top: 4px;
+    max-width: none;
+}
+
+
+/*OTRAAA SECCIONNNNN*/
+
+
+#proceso-del-proyecto h2{
+    font-family: sans-serif;
+}
+#proceso-del-proyecto{
+    background-color: rgba(200, 200, 200, 0.581);
+    border-radius: 20px;
+    text-align: justify;
+    margin: 30px;
+    padding-bottom: 20px;
+}
+.tabla-scroll{
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 20px;
+}
+.imagen-proceso{
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+.integrantes{
+    list-style-type: none;/*para sacar los puntos del ulo los numeros de ol*/
+}
+#proceso-del-proyecto h2{
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 15px;
+}
+/*otra SECCION---------------------------------------------------------------------------------------------------------------------------------------------*/
+#Diagrama-UML{
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+#titulo-UML{
+    text-align: center;
+    margin-top:18px;
+    padding: 30px;
+    padding-bottom: 5px;
+    font-family: sans-serif;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 75px;
+    margin:30px;
+    margin-top: 60px;
+}
+.Diagramas{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 25px 20px;
+    transition: transform 0.4s ease,
+    box-shadow 0.4s ease;
+    cursor: pointer;
+    border: 2px solid rgba(0,0,0,0.15);
+}
+.Diagramas h3{
+    text-shadow: 1px -1px 5px black;
+    font-family: sans-serif;
+}
+.Diagramas p{
+    text-shadow: 1px -1px 4px black;
+    font-family: Poppins;
+    font-size: 0.9em;
+    padding: 6px;
+}
+.Diagramas:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(62, 3, 225, 0.774);
+}
+.imgD{
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.DERcomo-driagrama-de-datosUML{
+    grid-column: span 2;
+    justify-self: center;
+    width: 50%;
+    padding: 20px;
+}
+.tarjeta-link{
+    display: contents;
+    color: inherit;/*"le dice no uses el azul por defecto de los links, usá el color que le correspondería si este <a> no existiera"*/
+    text-decoration: none;
+}
+.guias{
+    position: relative;
+    display: block;
+}
+
+/* 2. Estilos para el contenedor del texto interno */
+.pasos-arquitectura {
+  position: absolute;
+  top: 100%;       /* Se posiciona justo abajo del botón 'Detalles' */
+  left: 0;
+  width: 100%;     /* O el ancho para que cubra  latarjeta */
+  background-color:#ffffff; /* Color de fondo para que no se trasluzca lo de abajo */
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Sombra para dar efecto de flotado */
+  z-index: 9999;     /* Obliga a que se posicione POR ENCIMA de los otros cuadros */
+  padding: 12px;
+  border-radius: 8px;
+}
+/*otra SECCION Manual de Usuario y Manual de Programacion---------------------------------------------------------------------------------------------------------------------------------------------*/
+#Manual-Usuario, #Manual-programacion{
+    padding: 40px 30px;
+}
+#Manual-Usuario h2, #Manual-programacion h2, #Evidencias h2{
+    text-align: center;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+}
+#Manual-Usuario >/* el > significa hijo directo*/ div, #Manual-programacion > div{
+    max-width: 900px;
+    margin: 0 auto;
+}
+#Manual-Usuario > div > p{
+    font-family: Poppins;
+    text-align: center;
+    max-width: 700px;
+    margin: 0/*top*/ auto/*ringht*/ 30px/*bottom*/ auto/*left*/;
+    line-height: 1.6;
+}
+.Ayudas{
+    background-color: rgba(200, 200, 200, 0.4);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.Ayudas:hover{
+    background-color: rgba(140, 3, 225, 0.15);
+}
+.Ayudas h3{
+    font-family: sans-serif;
+}
+.Ayudas p{
+    font-family: Poppins;
+    font-size: 0.95em;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+#Manual-programacion > div{
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    gap: 25px;
+}
+.guias{
+    background-color: rgba(200, 200, 200, 0.4);
+    border-radius: 12px;
+    padding: 25px/*vertical arriba y abajo */ 15px/*horizontal izquierda y derecha*/;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.guias:hover{
+    transform: translateY(-5px);/*mueve el elemento de arriba hacia abajo osea vertical*/
+    background-color: rgba(140, 3, 225, 0.15);
+}
+.guias h3{
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+/*otra SECCION Evidencias---------------------------------------------------------------------------------------------------------------------------------------------*/
+#Evidencias{
+    padding: 40px 30px 60px 30px;
+    background-color: rgba(200, 200, 200, 0.3);
+}
+#Evidencias h3{
+    text-align: center;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;/*lo que hace es repartir el espacio que sobra al llegar a 1000px del max-width en partes iguales */
+}
+.galeria > div{
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 12px;
+    aspect-ratio: 1/1;/*sin esto el ancho y alto de cada casilla dependera del contenido que tiene, oero con esto se reparten el mismo ancho y largo por igual */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.galeria > div:hover{
+    transform: scale(1.05);
+}
+/*otra SECCION footer---------------------------------------------------------------------------------------------------------------------------------------------*/
+footer{
+    background-color:  rgba(15, 1, 52, 0.886);
+    text-align: center;
+    padding: 30px;
+    font-family: sans-serif;
+}
+footer h4{
+    padding-top: 10px;
+    color:bisque
+}
+footer ul{
+    padding: 0;
+    margin-bottom: 10px;
+    color:#ffffff
+}
+footer li{
+    padding: 3px 0;
+}
+footer p{
+    color:#ffffff
+}
+
+/* ==========================================================================
+   RESPONSIVE - agregado para que la página funcione en móvil y escritorio
+   No se modificó ninguna regla de arriba, solo se agregan/ajustan estilos
+   dentro de estas media queries.
+   ========================================================================== */
+
+/* Tablets */
+@media (max-width: 900px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .DERcomo-driagrama-de-datosUML{
+        grid-column: span 1;
+        width: 100%;
+    }
+    #Manual-programacion > div{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .galeria{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px){
+    .menu{
+        flex-direction: column;
+    }
+    .navegadores{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px 10px;
+        gap: 5px;
+    }
+    .enlaces-de-navegacion{
+        font-size: 0.85em;
+        padding: 8px;
+    }
+    .iconos{
+        width: 32px;
+        margin-bottom: 8px;
+    }
+    #descripcion{
+        height: auto;
+        min-height: 70vh;
+        padding: 40px 20px;
+    }
+    #descripcion h1{
+        font-size: 1.6em;
+    }
+    #descripcion p{
+        font-size: 0.95em;
+    }
+    .dato-descripcion{
+        padding: 10px 16px;
+    }
+    #proceso-del-proyecto{
+        margin: 15px;
+    }
+    #Manual-programacion > div{
+        grid-template-columns: 1fr;
+    }
+    .galeria{
+        grid-template-columns: 1fr;
+    }
+    footer li{
+        display: block;
+    }
+}
+
+/* ==========================================================================
+   AGREGADOS para adaptar la página a la checklist (no se tocó nada de arriba)
+   ========================================================================== */
+.tabla-anios{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Poppins, sans-serif;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.tabla-anios th, .tabla-anios td{
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    vertical-align: top;
+}
+.tabla-anios th{
+    background: linear-gradient(250deg,#000f9aaf, #3e03e1,#7d21f5);
+    color: #ffffff;
+}
+.Ayudas{ cursor: default; }
+.Ayudas ul{ margin: 8px 0 0 20px; font-family: Poppins, sans-serif; line-height: 1.6; }
+.Ayudas details{ margin-top: 8px; font-family: Poppins, sans-serif; }
+.Ayudas summary{ cursor: pointer; font-weight: bold; }
+.captura{
+    margin-top: 12px;
+    padding: 40px 10px;
+    text-align: center;
+    border: 2px dashed rgba(0,0,0,0.25);
+    border-radius: 12px;
+    font-family: Poppins, sans-serif;
+    opacity: 0.7;
+}
+.guias{ cursor: default; }
+.guias p{ font-family: Poppins, sans-serif; font-size: 0.85em; margin-top: 8px; line-height: 1.5; }
+.guias code{ font-size: 0.8em; word-break: break-word; }
+#Cierre{ padding: 40px 30px; }
+#Cierre h2{ text-align: center; font-family: sans-serif; padding-bottom: 10px; }
+.cierre{ max-width: 800px; margin: 0 auto; font-family: Poppins, sans-serif; line-height: 1.6; }
+.cierre p{ margin-bottom: 12px; }
+.cierre h3{ font-family: sans-serif; margin: 20px 0 8px; }
+footer p, footer li{ font-family: Poppins, sans-serif; }
+
+/* ==========================================================================
+   AJUSTES EXTRA PARA CELULARES Y TABLETS
+   ========================================================================== */
+
+/* Dispositivos táctiles: no hay "pasar el mouse", se anulan los efectos hover */
+@media (hover: none){
+    .Diagramas:hover, .guias:hover, .galeria > div:hover,
+    .iconos:hover, .logo-menu:hover{
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* Tablets y celulares: el cronograma se desplaza de costado en vez de achicarse */
+@media (max-width: 900px){
+    .imagen-proceso{
+        min-width: 700px;
+    }
+    .tabla-scroll{
+        padding: 0 10px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px){
+    header{
+        position: static; /* el menú ya no queda fijo y tapando la pantalla */
+    }
+    .enlaces-de-navegacion{
+        margin-top: 0;
+    }
+    .grid{
+        margin: 15px;
+        gap: 25px;
+    }
+    #Manual-Usuario, #Manual-programacion, #Cierre, #Evidencias{
+        padding: 25px 15px;
+    }
+}
+
+/* ==========================================================================
+   IMÁGENES DE LAS TARJETAS DE DIAGRAMAS: se muestran completas, sin recortar
+   ========================================================================== */
+.imgD{
+    height: 200px;
+    object-fit: contain;      /* contain = se ve la imagen entera; cover la recortaba */
+    background-color: #ffffff;
+}
+@media (max-width: 900px){
+    .DERcomo-driagrama-de-datosUML{
+        width: 100%;
+        grid-column: auto;
+    }
+}
