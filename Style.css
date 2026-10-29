@@ -76,16 +76,15 @@ header{
     padding: 20px;
     background-image: linear-gradient(
         0deg , 
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
     ),url("imagenes/logo.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
 }
 #descripcion h1{
-    text-shadow: 2px 2px 5px;
-    
+    text-shadow: 0 0 2px #ffffff, 0 0 7px rgba(255, 255, 255, 0.35);
 }
 #descripcion p{
     text-shadow: 1px 1px 1px black;
@@ -182,21 +181,20 @@ header{
     padding: 25px 20px;
     transition: transform 0.4s ease,
     box-shadow 0.4s ease;
-    cursor: pointer;
     border: 2px solid rgba(0,0,0,0.15);
+    background-color: rgba(255,255,255,0.6);
 }
 .Diagramas h3{
-    text-shadow: 1px -1px 5px black;
     font-family: sans-serif;
+    margin-top: 12px;
 }
 .Diagramas p{
-    text-shadow: 1px -1px 4px black;
     font-family: Poppins;
     font-size: 0.9em;
     padding: 6px;
 }
 .Diagramas:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
     box-shadow: 0 10px 30px rgba(62, 3, 225, 0.774);
 }
 .imgD{
@@ -310,25 +308,46 @@ header{
 }
 .galeria{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
     max-width: 1000px;
-    margin: 0 auto;/*lo que hace es repartir el espacio que sobra al llegar a 1000px del max-width en partes iguales */
+    margin: 0 auto;
 }
 .galeria > div{
     background-color: rgba(255,255,255,0.6);
     border-radius: 12px;
-    aspect-ratio: 1/1;/*sin esto el ancho y alto de cada casilla dependera del contenido que tiene, oero con esto se reparten el mismo ancho y largo por igual */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 25px 20px;
     font-family: Poppins;
     text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
 }
-.galeria > div:hover{
-    transform: scale(1.05);
+.galeria > div > p{
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+.miniaturas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+.miniaturas figure{
+    margin: 0;
+}
+.miniaturas img{
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.15);
+    display: block;
+}
+.miniaturas figcaption{
+    margin-top: 6px;
+    font-size: 0.8em;
+}
+.galeria video{
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
 }
 /*otra SECCION footer---------------------------------------------------------------------------------------------------------------------------------------------*/
 footer{
@@ -369,9 +388,6 @@ footer p{
         width: 100%;
     }
     #Manual-programacion > div{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .galeria{
         grid-template-columns: repeat(2,1fr);
     }
 }
@@ -424,9 +440,6 @@ footer p{
     }
 }
 
-/* ==========================================================================
-   AGREGADOS para adaptar la página a la checklist (no se tocó nada de arriba)
-   ========================================================================== */
 .tabla-anios{
     width: 100%;
     border-collapse: collapse;
@@ -469,3 +482,215 @@ footer p{
 .cierre p{ margin-bottom: 12px; }
 .cierre h3{ font-family: sans-serif; margin: 20px 0 8px; }
 footer p, footer li{ font-family: Poppins, sans-serif; }
+
+@media (hover: none){
+    .Diagramas:hover, .guias:hover,
+    .iconos:hover, .logo-menu:hover{
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 900px){
+    .imagen-proceso{
+        min-width: 1000px;
+    }
+    .tabla-scroll{
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        position: static; }
+    .enlaces-de-navegacion{
+        margin-top: 0;
+    }
+    .grid{
+        margin: 15px;
+        gap: 25px;
+    }
+    #Manual-Usuario, #Manual-programacion, #Cierre, #Evidencias{
+        padding: 25px 15px;
+    }
+}
+
+.imgD{
+    height: 260px;
+    object-fit: contain;
+    background-color: #ffffff;
+}
+@media (max-width: 900px){
+    .DERcomo-driagrama-de-datosUML{
+        width: 100%;
+        grid-column: auto;
+    }
+}
+
+.pantalla{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+.pantalla img{
+    width: 45%;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.pantalla h4{
+    font-family: sans-serif;
+    margin-bottom: 6px;
+}
+.diagrama-scroll{
+    overflow-x: auto;
+    margin: 20px 0;
+}
+.diagrama-scroll .der-diagrama{
+    margin: 0;
+}
+.aviso-movil{
+    display: none;
+}
+@media (max-width: 900px){
+    .pantalla{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .pantalla img{
+        width: 100%;
+    }
+    .ancho-clases{
+        min-width: 1500px;
+    }
+    .ancho-uso{
+        min-width: 1100px;
+    }
+    .ancho-der{
+        min-width: 1100px;
+    }
+    .aviso-movil{
+        display: block;
+        text-align: center;
+        font-size: 0.85em;
+        opacity: 0.75;
+        margin-top: 8px;
+    }
+}
+
+.Diagramas a:first-child{
+    display: block;
+    width: 100%;
+}
+.ver-completo{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: linear-gradient(250deg,#000f9aaf, #3e03e1,#7d21f5);
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.ver-completo:hover{
+    opacity: 0.85;
+}
+
+.menu-desplegable summary{
+    display: none;
+}
+.menu-desplegable summary::-webkit-details-marker{
+    display: none;
+}
+@media (max-width: 600px){
+    .menu-desplegable{
+        width: 100%;
+    }
+    .menu-desplegable summary{
+        display: block;
+        list-style: none;
+        cursor: pointer;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: 14px;
+    }
+}
+
+.tabla-cronograma{
+    min-width: 760px;
+}
+.tabla-cronograma .celda-anio{
+    background: linear-gradient(250deg,#000f9aaf, #3e03e1,#7d21f5);
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+.tabla-cronograma .sin-actividad td{
+    opacity: 0.7;
+    font-style: italic;
+}
+.metodologia{
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    font-family: Poppins, sans-serif;
+    line-height: 1.6;
+}
+.metodologia h3{
+    font-family: sans-serif;
+    margin-bottom: 8px;
+}
+.metodologia ul{
+    margin: 10px 0 0 22px;
+}
+.metodologia li{
+    margin-bottom: 8px;
+}
+
+.fecha{
+    display: inline-block;
+    opacity: 0.7;
+    font-size: 0.9em;
+}
+.videos, .demo-columnas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.videos figure, .demo-columnas figure{
+    margin: 0;
+}
+.videos video{
+    max-width: 100%;
+    max-height: 480px;
+    background-color: #000000;
+}
+.demo-columnas{
+    grid-template-columns: repeat(3, 1fr);
+}
+.demo-columnas img{
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.15);
+    display: block;
+}
+.videos figcaption, .demo-columnas figcaption{
+    margin-top: 8px;
+    font-size: 0.85em;
+    line-height: 1.5;
+    text-align: left;
+}
+@media (max-width: 900px){
+    .demo-columnas{
+        grid-template-columns: 1fr;
+    }
+}
+
+section{
+    scroll-margin-top: 80px;
+}
