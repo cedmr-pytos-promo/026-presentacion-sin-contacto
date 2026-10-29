@@ -77,6 +77,8 @@
 <body>
     <header>
         <div class="menu">
+            <details class="menu-desplegable" open>
+            <summary>☰ Menú</summary>
             <nav class="navegadores">
                 <a href="index.html#descripcion"><img src="imagenes/logo-menu.jpeg" class="logo-menu" alt="Logo del proyecto"></a>
                 <a href="index.html#Diagrama-UML" class="enlaces-de-navegacion">Diagrama UML</a>
@@ -84,6 +86,7 @@
                 <a href="index.html#Manual-programacion" class="enlaces-de-navegacion">Manual de Programación</a>
                 <a href="index.html#Evidencias" class="enlaces-de-navegacion">Galería de Evidencia</a>
             </nav>
+            </details>
         </div>
     </header>
 
@@ -106,7 +109,10 @@
             <p>Regla basada en la distancia entre landmarks. Por ejemplo, <code style="display:inline; padding:2px 6px;">DIST(4,8) &lt; 40</code> reconoce el gesto pulgar-índice.</p>
         </div>
 
-        <img src="imagenes/diagrama-der.png" alt="Diagrama entidad-relación completo: tablas GESTOS, CONFIGURACIONES, ACCIONES y la tabla de relación CONFIGURACIONES_GESTOS_ACCIONES" class="der-diagrama">
+        <div class="diagrama-scroll">
+            <img src="imagenes/diagrama-der.png" alt="Diagrama entidad-relación completo: tablas GESTOS, CONFIGURACIONES, ACCIONES y la tabla de relación CONFIGURACIONES_GESTOS_ACCIONES" class="der-diagrama ancho-der">
+        </div>
+        <p class="aviso-movil">Desliza hacia los lados para ver el diagrama completo.</p>
         <p style="font-size: 0.85em; opacity: 0.75; text-align: center;">Tabla de relación que une gestos, acciones y configuraciones (relación muchos a muchos).</p>
 
         <p style="font-size: 1em; margin-top: 8px; margin-left: 15px;">Esta tabla es la que conecta a las otras tres. Por ejemplo, así queda relacionado un gesto real dentro del sistema:</p>
@@ -122,5 +128,6 @@
             <a href="index.html#Diagrama-UML" class="volver">&larr; Volver al inicio</a>
         </div>
     </div>
+    <script src="menu.js"></script>
 </body>
 </html>
