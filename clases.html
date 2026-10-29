@@ -82,6 +82,8 @@
 <body>
     <header>
         <div class="menu">
+            <details class="menu-desplegable" open>
+            <summary>☰ Menú</summary>
             <nav class="navegadores">
                 <a href="index.html#descripcion"><img src="imagenes/logo-menu.jpeg" class="logo-menu" alt="Logo del proyecto"></a>
                 <a href="index.html#Diagrama-UML" class="enlaces-de-navegacion">Diagrama UML</a>
@@ -89,6 +91,7 @@
                 <a href="index.html#Manual-programacion" class="enlaces-de-navegacion">Manual de Programación</a>
                 <a href="index.html#Evidencias" class="enlaces-de-navegacion">Galería de Evidencia</a>
             </nav>
+            </details>
         </div>
     </header>
 
@@ -115,7 +118,10 @@
             <p>Las palabras entre comillas angulares aclaran qué tipo de elemento es. Por ejemplo, <code style="display:inline; padding:2px 6px;">«Enum»</code> es una lista de valores fijos, <code style="display:inline; padding:2px 6px;">«dataclass»</code> es una clase que solo guarda datos y <code style="display:inline; padding:2px 6px;">«módulo»</code> es un archivo con funciones sueltas, sin clase.</p>
         </div>
 
-        <img src="imagenes/diagrama-clases.png" alt="Diagrama de clases del sistema: MainWindow, ControlPage, DetectionWorker, Camera, GestureDetector, DetectionResult, Gesture y keyboard_actions, con sus atributos, métodos y relaciones" class="der-diagrama">
+        <div class="diagrama-scroll">
+            <img src="imagenes/diagrama-clases.png" alt="Diagrama de clases del sistema: MainWindow, ControlPage, DetectionWorker, Camera, GestureDetector, DetectionResult, Gesture y keyboard_actions, con sus atributos, métodos y relaciones" class="der-diagrama ancho-clases">
+        </div>
+        <p class="aviso-movil">Desliza hacia los lados para ver el diagrama completo.</p>
         <p style="font-size: 0.85em; opacity: 0.75; text-align: center;">Las clases del programa y sus relaciones. Los nombres son los mismos que en el código fuente.</p>
 
         <h2 id="clases">Las clases del sistema</h2>
@@ -178,5 +184,6 @@
             <a href="index.html#Diagrama-UML" class="volver">&larr; Volver al inicio</a>
         </div>
     </div>
+    <script src="menu.js"></script>
 </body>
 </html>
