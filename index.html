@@ -12,6 +12,8 @@
 <body>
     <header>
         <div class="menu">
+            <details class="menu-desplegable" open>
+            <summary>☰ Menú</summary>
             <nav class="navegadores">
                 <a href="#descripcion"><img src="imagenes/logo-menu.jpeg" class="logo-menu" alt="Logo del proyecto"></a>
                 <a href="#proceso-del-proyecto" class="enlaces-de-navegacion">Proceso</a>
@@ -20,13 +22,14 @@
                 <a href="#Manual-programacion" class="enlaces-de-navegacion">Manual de Programación</a>
                 <a href="#Evidencias" class="enlaces-de-navegacion">Galería de Evidencia</a>
                 <a href="#Cierre" class="enlaces-de-navegacion">Cierre</a>
-                <!-- COMPLETAR: reemplazar por la URL real del repositorio del equipo -->
-                <a href="https://github.com/benjaminamarillanunez-ux/presentacion-digital-sin-contacto" target="_blank" rel="noopener" aria-label="Repositorio en GitHub">
+                <a href="https://github.com/cedmr-pytos-promo/026-presentacion-sin-contacto" target="_blank" rel="noopener" aria-label="Repositorio en GitHub">
                 <svg class="iconos" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                 </svg>
                 </a>
+                <a href="https://github.com/alejandrosamuelb18-star/presentacion-sin-contacto-descargas/releases/download/v1.0.0/PresentacionDigital.zip" id="boton-descargar" class="enlaces-de-navegacion">Descargar</a>
             </nav>
+            </details>
         </div>
     </header>
 
@@ -61,34 +64,61 @@
             </table>
         </div>
         <div class="tabla-scroll">
-            <img src="imagenes/proceso.png" alt="Cronograma del Proceso del Proyecto, por mes desde junio 2025 hasta octubre 2026, con actividades, responsables y entregables" class="imagen-proceso">
+            <table class="tabla-anios tabla-cronograma">
+                <thead><tr><th>Año</th><th>Mes</th><th>Actividades</th><th>Responsables</th><th>Entregable</th></tr></thead>
+                <tbody>
+                    <tr><td rowspan="7" class="celda-anio">2025</td><td>Junio</td><td>Lanzamiento del proyecto de promoción</td><td>Todo el equipo</td><td>Evento de lanzamiento</td></tr>
+                    <tr><td>Julio</td><td>Pruebas con usuarios (piloto)</td><td>Alejandro Trigo (Desarrollo), Lía Ochipinti (Coordinación)</td><td>Informe de prueba 1</td></tr>
+                    <tr><td>Agosto</td><td>Ajustes de mejoras</td><td>Alejandro Trigo (Desarrollo)</td><td>Versión 1.1</td></tr>
+                    <tr><td>Septiembre</td><td>Pruebas extendidas</td><td>Alejandro Trigo (Desarrollo), Lía Ochipinti (Coordinación)</td><td>Informe de prueba 2</td></tr>
+                    <tr><td>Octubre</td><td>Documentación final</td><td>Rocío Gómez (Documentación)</td><td>Manual final y guía técnica</td></tr>
+                    <tr><td>Noviembre</td><td>Revisión de feedback post-lanzamiento</td><td>Lía Ochipinti (Coordinación), Ariel Amarilla (Documentación y recursos)</td><td>Lista de mejoras</td></tr>
+                    <tr class="sin-actividad"><td>Diciembre</td><td>No se registraron actividades de desarrollo en este período.</td><td>—</td><td>Sin entregables</td></tr>
+                    <tr><td rowspan="6" class="celda-anio">2026</td><td>Enero</td><td>Planificación de nuevas funcionalidades</td><td>Todo el equipo</td><td>Plan de desarrollo 2026</td></tr>
+                    <tr><td>Febrero</td><td>Implementación de mejoras</td><td>Alejandro Trigo (Desarrollo)</td><td>Versión 2.0</td></tr>
+                    <tr class="sin-actividad"><td>Marzo a julio</td><td>No se registraron actividades de desarrollo en este período; no se generaron entregables asociados.</td><td>—</td><td>Sin entregables</td></tr>
+                    <tr><td>Agosto</td><td>Desarrollo del sitio web</td><td>Ariel Amarilla (Recursos y Desarrollo Web)</td><td>Sitio publicado en GitHub Pages y manual de usuario</td></tr>
+                    <tr><td>Septiembre</td><td>Pruebas finales</td><td>Lía Ochipinti (Coordinación)</td><td>Informe de pruebas finales</td></tr>
+                    <tr><td>Octubre</td><td>Documentación actualizada, defensa final y cierre del proyecto</td><td>Todo el equipo</td><td>Manual actualizado, guía técnica, demo final e informe de cierre</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="aviso-movil">Desliza hacia los lados para ver el cronograma completo.</p>
+
+        <div class="metodologia">
+            <h3>Metodología de trabajo</h3>
+            <p>En 2.º año el trabajo se centró en construir las funciones básicas del sistema y probarlas. En 3.º año el equipo aplicó una <strong>metodología mixta</strong>: combinó la organización por etapas, con fechas y entregables definidos en el cronograma, con prácticas de trabajo ágil, es decir, avances cortos que se revisan y se mejoran.</p>
+            <ul>
+                <li><strong>Reparto de tareas por roles:</strong> Alejandro Trigo desarrolló el programa, Lía Ochipinti coordinó y realizó el aseguramiento de la calidad, Ariel Amarilla se ocupó de los recursos y del sitio web, y Rocío Gómez de la documentación.</li>
+                <li><strong>Alcance priorizado:</strong> las funcionalidades se ordenaron con la tabla MoSCoW (imprescindibles y deseables) al inicio y se revisaron al final del proyecto.</li>
+                <li><strong>Iteraciones de unas 3 semanas:</strong> en cada una se hacía un avance, se revisaba, se probaba y se ajustaba.</li>
+                <li><strong>Pruebas e informes:</strong> pruebas piloto con usuarios, pruebas extendidas y pruebas finales, cada una con su informe.</li>
+                <li><strong>Retrospectiva final:</strong> el equipo valoró como logros haber conseguido que el reconocimiento de gestos funcione y haber completado la interfaz, y la importancia de probar y revisar durante todo el proceso.</li>
+            </ul>
         </div>
     </section>
 
     <section id="Diagrama-UML">
         <h2 id="titulo-UML">Diagramas</h2>
         <div class="grid">
-            <a href="clases.html" class="tarjeta-link">
-                <div class="Diagramas Diagrama-clases">
-                    <img class="imgD" src="imagenes/diagrama-clases.png" alt="Diagrama de clases del sistema">
-                    <h3>Diagrama de clases</h3>
-                    <p>Es un tipo de diagrama estructurado en el Lenguaje de Modelado Unificado (UML) que representa gráficamente la estructura y organización del sistema orientado a objetos.</p>
-                </div>
-            </a>
-            <a href="casos-de-uso.html" class="tarjeta-link">
-                <div class="Diagramas Diagrama-de-casos-de-usos">
-                    <img class="imgD" src="imagenes/diagrama-casos-uso.jpg" alt="Diagrama de casos de uso del sistema">
-                    <h3>Diagrama de casos de uso</h3>
-                    <p>Representación visual que muestra las funciones principales del sistema y cómo los usuarios interactúan con él.</p>
-                </div>
-            </a>
-            <a href="der.html" class="tarjeta-link">
-                <div class="Diagramas DERcomo-driagrama-de-datosUML">
-                    <img class="imgD" src="imagenes/diagrama-der.png" alt="Diagrama entidad-relación de la base de datos">
-                    <h3>DER como diagrama de datos</h3>
-                    <p>Un Diagrama de Entidad-Relación (DER) es un modelo visual que se utiliza para diseñar y representar la estructura lógica de la base de datos.</p>
-                </div>
-            </a>
+            <article class="Diagramas Diagrama-clases">
+                <a href="clases.html"><img class="imgD" src="imagenes/diagrama-clases.png" alt="Diagrama de clases del sistema"></a>
+                <h3>Diagrama de clases</h3>
+                <p>Es un tipo de diagrama estructurado en el Lenguaje de Modelado Unificado (UML) que representa gráficamente la estructura y organización del sistema orientado a objetos.</p>
+                <a href="clases.html" class="ver-completo">Ver diagrama completo</a>
+            </article>
+            <article class="Diagramas Diagrama-de-casos-de-usos">
+                <a href="casos-de-uso.html"><img class="imgD" src="imagenes/diagrama-casos-uso.png" alt="Diagrama de casos de uso del sistema"></a>
+                <h3>Diagrama de casos de uso</h3>
+                <p>Representación visual que muestra las funciones principales del sistema y cómo los usuarios interactúan con él.</p>
+                <a href="casos-de-uso.html" class="ver-completo">Ver diagrama completo</a>
+            </article>
+            <article class="Diagramas DERcomo-driagrama-de-datosUML">
+                <a href="der.html"><img class="imgD" src="imagenes/diagrama-der.png" alt="Diagrama entidad-relación de la base de datos"></a>
+                <h3>DER como diagrama de datos</h3>
+                <p>Un Diagrama de Entidad-Relación (DER) es un modelo visual que se utiliza para diseñar y representar la estructura lógica de la base de datos.</p>
+                <a href="der.html" class="ver-completo">Ver diagrama completo</a>
+            </article>
         </div>
     </section>
 
@@ -97,7 +127,7 @@
         <div>
             <div class="Ayudas">
                 <h3>Introducción</h3>
-                <p>Este sistema permite controlar una presentación con gestos de la mano frente a la cámara: mover el cursor y hacer clic sin tocar el mouse ni el teclado.</p>
+                <p>Este sistema permite controlar una presentación con gestos de la mano frente a la cámara: cambiar de diapositiva sin tocar el mouse ni el teclado, al unir el pulgar con otro dedo.</p>
             </div>
             <div class="Ayudas">
                 <h3>Requisitos</h3>
@@ -110,18 +140,42 @@
             <div class="Ayudas">
                 <h3>Guía de uso por pantalla</h3>
                 <ul>
-                    <li><strong>Mover el cursor:</strong> mover el dedo índice frente a la cámara.</li>
-                    <li><strong>Clic izquierdo:</strong> juntar pulgar e índice.</li>
-                    <li><strong>Clic derecho:</strong> juntar pulgar y dedo medio.</li>
+                    <li><strong>Avanzar:</strong> unir la punta del pulgar con la del índice (se pulsa la flecha derecha).</li>
+                    <li><strong>Retroceder:</strong> unir la punta del pulgar con la del dedo medio (se pulsa la flecha izquierda).</li>
                 </ul>
-                <!-- COMPLETAR: capturas de cada pantalla/gesto -->
-                <div class="captura">Captura de pantalla (completar)</div>
+                <div class="pantalla">
+                    <img src="imagenes/guia/pantalla-inicio.jpg" alt="Pantalla de inicio del programa, con el estado del sistema y la información del proyecto" loading="lazy">
+                    <div>
+                        <h4>Inicio</h4>
+                        <p>Muestra el estado del sistema, que indica si la detección está detenida o en marcha, y cuántos gestos hay disponibles. Debajo están los datos del proyecto y el botón «Ir al control por gestos».</p>
+                    </div>
+                </div>
+                <div class="pantalla">
+                    <div>
+                        <h4>Control por gestos</h4>
+                        <p>Es la pantalla de trabajo. El botón «Iniciar detección» enciende la cámara y «Detener detección» la apaga. Con «Ocultar vista previa» se deja de ver la imagen, pero la detección sigue activa. Los indicadores muestran si el sistema está funcionando y si la mano se detecta o no.</p>
+                    </div>
+                </div>
+                <div class="pantalla">
+                    <img src="imagenes/guia/pantalla-manual.jpg" alt="Pantalla del manual de usuario del programa, con los dos gestos explicados con dibujos" loading="lazy">
+                    <div>
+                        <h4>Manual de usuario</h4>
+                        <p>Explica los pasos para usar el programa y muestra con dibujos los dos gestos. Al final hay una sección para resolver problemas frecuentes.</p>
+                    </div>
+                </div>
+                <div class="pantalla">
+                    <img src="imagenes/guia/pantalla-creditos.jpg" alt="Pantalla de créditos del programa, con la introducción, los integrantes del equipo y los datos del proyecto" loading="lazy">
+                    <div>
+                        <h4>Créditos</h4>
+                        <p>Presenta la introducción del proyecto, los integrantes con su rol dentro del equipo y los datos del proyecto, como la versión, el año y el curso.</p>
+                    </div>
+                </div>
             </div>
             <div class="Ayudas">
                 <h3>Preguntas frecuentes</h3>
                 <details><summary>¿La mano no se detecta?</summary><p>Mejorar la iluminación y mantener la mano completa dentro del cuadro de la cámara.</p></details>
-                <details><summary>¿Los clics no responden?</summary><p>Acercar bien las yemas de los dedos y mantener la mano en una posición frontal.</p></details>
-                <details><summary>¿El cursor se mueve con saltos?</summary><p>Evitar fondos muy cargados y cerrar otros programas que usen la cámara.</p></details>
+                <details><summary>¿El gesto no cambia la diapositiva?</summary><p>Unir bien las puntas de los dedos y esperar medio segundo entre un gesto y el siguiente.</p></details>
+                <details><summary>¿La cámara no se enciende?</summary><p>Cerrar otras aplicaciones que la estén usando, como Zoom o Teams, y revisar en Windows el permiso de la cámara en Configuración, Privacidad y seguridad, Cámara.</p></details>
             </div>
         </div>
     </section>
@@ -129,33 +183,118 @@
     <section id="Manual-programacion">
         <h2>Manual de programación</h2>
         <div>
-            <div class="guias"><h3>Arquitectura general</h3><p>Cámara → OpenCV → MediaPipe → reglas de gestos → PyAutoGUI / PyWin32 → sistema. Configuración gesto–acción en base de datos.</p></div>
+            <div class="guias"><h3>Arquitectura general</h3><p>Cámara → OpenCV → MediaPipe → reglas de gestos → PyAutoGUI → flechas del teclado. Los parámetros se guardan en el archivo config.py.</p></div>
             <div class="guias"><h3>Diagrama de clases</h3><p>Ver sección Diagramas.</p></div>
-            <div class="guias"><h3>DER de la base de datos</h3><p>Tablas GESTOS, ACCIONES, CONFIGURACIONES y su relación. <a href="der.html">Ver detalle</a>.</p></div>
+            <div class="guias"><h3>DER de la base de datos</h3><p>Modelo propuesto con las tablas GESTOS, ACCIONES y CONFIGURACIONES. El programa actual no usa base de datos. <a href="der.html">Ver detalle</a>.</p></div>
             <div class="guias"><h3>Descripción de las clases principales</h3><p><strong>MainWindow</strong> (ventana principal), <strong>ControlPage</strong> (pantalla de control), <strong>DetectionWorker</strong> (trabajo en segundo plano), <strong>Camera</strong> (cámara), <strong>GestureDetector</strong> (detección de gestos), <strong>DetectionResult</strong> y <strong>Gesture</strong> (resultado y tipos de gesto). <a href="clases.html#clases">Ver la descripción de cada clase</a>.</p></div>
-            <div class="guias"><h3>Cómo ejecutar el proyecto</h3><p><code>pip install opencv-python mediapipe pyautogui pywin32 psutil</code>, luego ejecutar el archivo principal con Python.</p></div>
-            <div class="guias"><h3>Librerías y decisiones de diseño</h3><p>OpenCV (imagen), MediaPipe Hands (puntos de la mano), PyAutoGUI y PyWin32 (control del equipo), Psutil.</p></div>
+            <div class="guias"><h3>Cómo ejecutar el proyecto</h3><p>Instalar las librerías con <code>pip install -r requirements.txt</code> y ejecutar <code>python main.py</code>.</p></div>
+            <div class="guias"><h3>Librerías y decisiones de diseño</h3><p>OpenCV (imagen), MediaPipe Hands (puntos de la mano), PyAutoGUI (pulsación de teclas) y PySide6 (interfaz).</p></div>
         </div>
     </section>
 
     <section id="Evidencias">
         <h2>Galería de evidencia</h2>
         <div class="galeria">
-            <!-- COMPLETAR: reemplazar cada caja por <img> o <video> reales -->
-            <div><h3>Capturas</h3></div>
-            <div><h3>Fotos del proceso</h3></div>
-            <div><h3>Video demo</h3></div>
-            <div><h3>Demo del sistema</h3></div>
+            <div>
+                <h3>Capturas</h3>
+                <p>Código fuente del programa.</p>
+                <div class="miniaturas">
+                    <figure>
+                        <a href="imagenes/galeria/codigo-main.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-main.jpg" alt="Código del archivo main.py, el punto de entrada del programa" loading="lazy"></a>
+                        <figcaption>main.py: punto de entrada <span class="fecha">12/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/codigo-detection-worker.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-detection-worker.jpg" alt="Código del archivo detection_worker.py, que lee la cámara en segundo plano" loading="lazy"></a>
+                        <figcaption>detection_worker.py: trabajo en segundo plano <span class="fecha">12/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/codigo-gesture-detector.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-gesture-detector.jpg" alt="Código del archivo gesture_detector.py, que detecta los gestos con MediaPipe" loading="lazy"></a>
+                        <figcaption>gesture_detector.py: detección de gestos <span class="fecha">12/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/codigo-keyboard-actions.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-keyboard-actions.jpg" alt="Código del archivo keyboard_actions.py, que pulsa las teclas de los gestos" loading="lazy"></a>
+                        <figcaption>keyboard_actions.py: teclas de los gestos <span class="fecha">12/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/codigo-config.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-config.jpg" alt="Código del archivo config.py, con los parámetros de la cámara y la detección" loading="lazy"></a>
+                        <figcaption>config.py: parámetros ajustables <span class="fecha">12/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/codigo-app-info.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-app-info.jpg" alt="Código del archivo app_info.py, con el nombre, el equipo y los datos del proyecto" loading="lazy"></a>
+                        <figcaption>app_info.py: datos del proyecto <span class="fecha">12/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/carpeta-proyecto.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/carpeta-proyecto.jpg" alt="Carpeta del proyecto en el explorador de archivos" loading="lazy"></a>
+                        <figcaption>Carpeta del proyecto <span class="fecha">12/10/2026</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div>
+                <h3>Fotos del proceso</h3>
+                <p>Desarrollo y prueba de la página web.</p>
+                <div class="miniaturas">
+                    <figure>
+                        <a href="imagenes/galeria/proceso-html-inicial.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/proceso-html-inicial.jpg" alt="Primera versión de la página web mostrada en el navegador junto al código HTML" loading="lazy"></a>
+                        <figcaption>Primera versión de la página web <span class="fecha">14/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/proceso-prueba-pantalla.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/proceso-prueba-pantalla.jpg" alt="Prueba de la página web en la computadora, con el código a la izquierda y la página a la derecha" loading="lazy"></a>
+                        <figcaption>Prueba de la página en pantalla <span class="fecha">14/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/proceso-publicacion.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/proceso-publicacion.jpg" alt="Publicación de la página web en GitHub, con el repositorio abierto en el navegador" loading="lazy"></a>
+                        <figcaption>Publicación en GitHub <span class="fecha">14/10/2026</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div>
+                <h3>Videos</h3>
+                <p>El sistema funcionando.</p>
+                <div class="videos">
+                    <figure>
+                        <video controls preload="metadata" poster="imagenes/galeria/demo-portada.jpg">
+                            <source src="videos/demo.mp4" type="video/mp4">
+                            Tu navegador no puede reproducir este video.
+                        </video>
+                        <figcaption><strong>Demostración en el aula.</strong> La presentación cambia de diapositiva con los gestos de la mano, sin tocar el teclado. <span class="fecha">27/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <video controls preload="metadata" poster="imagenes/galeria/programa-portada.jpg">
+                            <source src="videos/programa.mp4" type="video/mp4">
+                            Tu navegador no puede reproducir este video.
+                        </video>
+                        <figcaption><strong>El programa por dentro.</strong> La pantalla «Control por gestos» detecta la mano y marca sus puntos, y luego se ve el «Manual de usuario» con los dos gestos. <span class="fecha">27/10/2026</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div>
+                <h3>Demo del sistema</h3>
+                <p>Una persona usa el programa en el aula: tres momentos de la demostración.</p>
+                <div class="demo-columnas">
+                    <figure>
+                        <a href="imagenes/galeria/demo-1.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/demo-1.jpg" alt="Una mano frente a la computadora, que muestra la primera diapositiva" loading="lazy"></a>
+                        <figcaption><strong>1. Primera diapositiva.</strong> La persona coloca la mano frente a la cámara de la computadora, lista para hacer el gesto. En la pantalla se ve la primera diapositiva. <span class="fecha">27/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/demo-4.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/demo-4.jpg" alt="Una mano frente a la computadora, que muestra otra diapositiva" loading="lazy"></a>
+                        <figcaption><strong>2. Avanzando.</strong> Al unir los dedos, el programa pulsa la flecha derecha y la presentación pasa a la siguiente diapositiva sin tocar el teclado. <span class="fecha">27/10/2026</span></figcaption>
+                    </figure>
+                    <figure>
+                        <a href="imagenes/galeria/demo-7.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/demo-7.jpg" alt="Una mano frente a la computadora, que muestra una diapositiva más avanzada" loading="lazy"></a>
+                        <figcaption><strong>3. Continúa la presentación.</strong> La persona sigue cambiando de diapositiva con la mano desde su lugar, a distancia de la computadora. <span class="fecha">27/10/2026</span></figcaption>
+                    </figure>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="Cierre">
         <h2>Cierre del proyecto</h2>
         <div class="cierre">
-            <p>Se entregaron las <strong>6 de 6 funcionalidades</strong> previstas (cámara, detección de mano, cursor con el índice, clic izquierdo, clic derecho e interfaz de usuario): <strong>100 %</strong> del alcance comprometido.</p>
+            <p>Se completaron las funcionalidades previstas: cámara, detección y seguimiento de la mano, gesto de pulgar con índice para avanzar, gesto de pulgar con dedo medio para retroceder e interfaz de usuario, con el <strong>100 %</strong> del alcance comprometido.</p>
             <p>Como retrospectiva, el equipo destaca haber logrado el reconocimiento de gestos y completar la interfaz, y la importancia de probar y revisar durante todo el proceso.</p>
             <h3>Reflexión final del equipo</h3>
-            <p>todavia faltaaa</p>
+            <p>El proyecto «Presentación Digital Sin Contacto» demuestra cómo la tecnología puede facilitar el manejo de presentaciones digitales mediante gestos de la mano, sin necesidad de tocar la computadora. Esta propuesta permite interactuar de una manera más práctica, moderna e innovadora, y así ayuda a mejorar las actividades cotidianas.</p>
         </div>
     </section>
 
@@ -172,5 +311,6 @@
         <p>3º BATIN · Docente tutora: R. Daniela Ferreira-Delgado</p>
         <p>© 2026</p>
     </footer>
+    <script src="menu.js"></script>
 </body>
 </html>
