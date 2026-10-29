@@ -81,6 +81,8 @@
 <body>
     <header>
         <div class="menu">
+            <details class="menu-desplegable" open>
+            <summary>☰ Menú</summary>
             <nav class="navegadores">
                 <a href="index.html#descripcion"><img src="imagenes/logo-menu.jpeg" class="logo-menu" alt="Logo del proyecto"></a>
                 <a href="index.html#Diagrama-UML" class="enlaces-de-navegacion">Diagrama UML</a>
@@ -88,6 +90,7 @@
                 <a href="index.html#Manual-programacion" class="enlaces-de-navegacion">Manual de Programación</a>
                 <a href="index.html#Evidencias" class="enlaces-de-navegacion">Galería de Evidencia</a>
             </nav>
+            </details>
         </div>
     </header>
 
@@ -110,18 +113,20 @@
             <p>Es algo que el sistema permite hacer, visto desde quien lo usa. Se dibuja como un óvalo dentro del recuadro del sistema y su nombre empieza con un verbo, por ejemplo, <strong>Avanzar diapositiva</strong>.</p>
         </div>
         <div class="Ayudas">
-            <h3>Relaciones: asociación, «include» y «extend»</h3>
-            <p>La línea continua une a un actor con los casos de uso en los que participa. La flecha punteada <code style="display:inline; padding:2px 6px;">«include»</code> indica que un caso de uso necesita siempre a otro para funcionar. La flecha punteada <code style="display:inline; padding:2px 6px;">«extend»</code> indica que un caso de uso agrega un comportamiento opcional a otro.</p>
+            <h3>Relaciones: asociación e «include»</h3>
+            <p>La línea continua une a un actor con los casos de uso en los que participa. La flecha punteada <code style="display:inline; padding:2px 6px;">«include»</code> indica que un caso de uso necesita siempre a otro para funcionar.</p>
         </div>
 
-        <img src="imagenes/diagrama-casos-uso.jpg" alt="Diagrama de casos de uso del sistema, con el usuario y la cámara como actores y los casos de uso dentro del recuadro del sistema" class="der-diagrama">
-        <!-- CONFIRMAR: reemplazar esta imagen cuando el equipo corrija el diagrama (ver la lista de cambios) -->
+        <div class="diagrama-scroll">
+            <img src="imagenes/diagrama-casos-uso.png" alt="Diagrama de casos de uso del sistema, con el usuario y la cámara como actores y los casos de uso dentro del recuadro del sistema" class="der-diagrama ancho-uso">
+        </div>
+        <p class="aviso-movil">Desliza hacia los lados para ver el diagrama completo.</p>
         <p style="font-size: 0.85em; opacity: 0.75; text-align: center;">Los actores, los casos de uso y cómo se relacionan entre sí.</p>
 
         <h2>Actores</h2>
         <div class="Ayudas">
             <h3>Usuario</h3>
-            <p>Es la persona que da la presentación, por ejemplo, un docente o un estudiante. Se coloca frente a la cámara y hace los gestos con la mano.</p>
+            <p>Es la persona que da la presentación, por ejemplo, un docente o un estudiante. Maneja el programa (iniciar, detener y ocultar la vista previa) y hace los gestos con la mano frente a la cámara.</p>
         </div>
         <div class="Ayudas">
             <h3>Cámara</h3>
@@ -131,8 +136,38 @@
         <h2>Casos de uso</h2>
         <div class="tabla-scroll">
             <table class="tabla-anios">
-                <thead><tr><th>Caso de uso</th><th>Quién participa</th><th>Qué ocurre</th></tr></thead>
+                <thead><tr><th>Caso de uso</th><th>Actor</th><th>Qué ocurre</th></tr></thead>
                 <tbody>
+                    <tr>
+                        <td>Iniciar detección</td>
+                        <td>Usuario</td>
+                        <td>El usuario pulsa «Iniciar detección» en la pantalla «Control por gestos». El sistema enciende la cámara y empieza a analizar las imágenes. Incluye «Acceder a la cámara» y «Detectar gestos de la mano».</td>
+                    </tr>
+                    <tr>
+                        <td>Detener detección</td>
+                        <td>Usuario</td>
+                        <td>El usuario pulsa «Detener detección». El sistema apaga la cámara y deja de reconocer gestos.</td>
+                    </tr>
+                    <tr>
+                        <td>Mostrar u ocultar vista previa</td>
+                        <td>Usuario</td>
+                        <td>Con el botón «Ocultar vista previa» se deja de ver la imagen de la cámara, pero la detección sigue activa.</td>
+                    </tr>
+                    <tr>
+                        <td>Avanzar diapositiva</td>
+                        <td>Usuario</td>
+                        <td>Al unir el pulgar con el índice, el sistema pulsa la flecha derecha y la presentación avanza. Incluye «Detectar gestos de la mano».</td>
+                    </tr>
+                    <tr>
+                        <td>Retroceder diapositiva</td>
+                        <td>Usuario</td>
+                        <td>Al unir el pulgar con el dedo medio, el sistema pulsa la flecha izquierda y la presentación retrocede. Incluye «Detectar gestos de la mano».</td>
+                    </tr>
+                    <tr>
+                        <td>Consultar manual de usuario</td>
+                        <td>Usuario</td>
+                        <td>El usuario abre la sección «Manual de usuario» del programa, que explica los dos gestos con dibujos y ayuda a resolver problemas frecuentes.</td>
+                    </tr>
                     <tr>
                         <td>Acceder a la cámara</td>
                         <td>Cámara</td>
@@ -140,27 +175,9 @@
                     </tr>
                     <tr>
                         <td>Detectar gestos de la mano</td>
-                        <td>Usuario, Cámara</td>
-                        <td>El sistema analiza cada imagen, ubica la mano y reconoce si el usuario junta los dedos. Incluye siempre «Acceder a la cámara».</td>
+                        <td>Cámara</td>
+                        <td>El sistema analiza cada imagen, ubica la mano y reconoce si los dedos se unen. Es la base de los casos «Avanzar diapositiva» y «Retroceder diapositiva».</td>
                     </tr>
-                    <tr>
-                        <td>Avanzar diapositiva</td>
-                        <td>Usuario</td>
-                        <td>Al juntar el pulgar con el índice, el sistema pulsa la flecha derecha y la presentación avanza.</td>
-                    </tr>
-                    <tr>
-                        <td>Retroceder diapositiva</td>
-                        <td>Usuario</td>
-                        <td>Al juntar el pulgar con el dedo medio, el sistema pulsa la flecha izquierda y la presentación retrocede.</td>
-                    </tr>
-                    <tr>
-                        <td>Salir del sistema</td>
-                        <td>Usuario</td>
-                        <td>Al cerrar la ventana, el sistema apaga la cámara y libera los recursos.</td>
-                    </tr>
-                    <!-- CONFIRMAR con el equipo: el diagrama también dibuja "Iniciar sesión", "Configurar presentación",
-                         "Ver presentación", "Gestionar presentación", "Cargar diapositivas" y "Mostrar diapositivas".
-                         Esas funciones no existen en el programa actual, por eso no se describen aquí. -->
                 </tbody>
             </table>
         </div>
@@ -168,16 +185,17 @@
         <h2>Un ejemplo completo</h2>
         <p style="font-size: 1em; margin-left: 15px; text-align: left;">Así se conectan los casos de uso cuando el usuario quiere pasar a la diapositiva siguiente:</p>
         <div class="ejemplo-relacion">
-            <span class="dato">Usuario: junta pulgar e índice</span>
+            <span class="dato">Usuario: une pulgar e índice</span>
             <span class="flecha">&rarr;</span>
             <span class="dato">Detectar gestos de la mano</span>
             <span class="flecha">&rarr;</span>
-            <span class="dato">Avanzar diapositiva</span>
+            <span class="dato">Avanzar diapositiva: pulsa la flecha derecha</span>
         </div>
 
         <div style="text-align: center; margin-top: 15px;">
             <a href="index.html#Diagrama-UML" class="volver">&larr; Volver al inicio</a>
         </div>
     </div>
+    <script src="menu.js"></script>
 </body>
 </html>
