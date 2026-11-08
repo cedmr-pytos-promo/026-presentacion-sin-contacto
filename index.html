@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentación Digital Sin Contacto</title>
-    <link rel="stylesheet" href="prueba.css">
+    <link rel="stylesheet" href="Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -21,8 +21,9 @@
                 <a href="#Manual-Usuario" class="enlaces-de-navegacion">Manual de usuario</a>
                 <a href="#Manual-programacion" class="enlaces-de-navegacion">Manual de Programación</a>
                 <a href="#Evidencias" class="enlaces-de-navegacion">Galería de Evidencia</a>
+                <a href="https://github.com/cedmr-pytos-promo/026-presentacion-sin-contacto" class="enlaces-de-navegacion">Avance 026</a>
                 <a href="#Cierre" class="enlaces-de-navegacion">Cierre</a>
-                <a href="https://github.com/cedmr-pytos-promo/026-presentacion-sin-contacto" target="_blank" rel="noopener" aria-label="Repositorio en GitHub">
+                <a href="https://github.com/cedmr-pytos-promo/026-presentacion-sin-contacto" aria-label="Repositorio en GitHub">
                 <svg class="iconos" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                 </svg>
@@ -199,32 +200,32 @@
                 <h3>Capturas</h3>
                 <p>Código fuente del programa.</p>
                 <div class="miniaturas">
-                    <figure>
-                        <a href="imagenes/galeria/codigo-main.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-main.jpg" alt="Código del archivo main.py, el punto de entrada del programa" loading="lazy"></a>
+                    <figure id="foto-1">
+                        <a href="#imagen-1"><img src="imagenes/galeria/codigo-main.jpg" alt="Código del archivo main.py, el punto de entrada del programa" loading="lazy"></a>
                         <figcaption>main.py: punto de entrada <span class="fecha">12/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/codigo-detection-worker.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-detection-worker.jpg" alt="Código del archivo detection_worker.py, que lee la cámara en segundo plano" loading="lazy"></a>
+                    <figure id="foto-2">
+                        <a href="#imagen-2"><img src="imagenes/galeria/codigo-detection-worker.jpg" alt="Código del archivo detection_worker.py, que lee la cámara en segundo plano" loading="lazy"></a>
                         <figcaption>detection_worker.py: trabajo en segundo plano <span class="fecha">12/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/codigo-gesture-detector.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-gesture-detector.jpg" alt="Código del archivo gesture_detector.py, que detecta los gestos con MediaPipe" loading="lazy"></a>
+                    <figure id="foto-3">
+                        <a href="#imagen-3"><img src="imagenes/galeria/codigo-gesture-detector.jpg" alt="Código del archivo gesture_detector.py, que detecta los gestos con MediaPipe" loading="lazy"></a>
                         <figcaption>gesture_detector.py: detección de gestos <span class="fecha">12/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/codigo-keyboard-actions.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-keyboard-actions.jpg" alt="Código del archivo keyboard_actions.py, que pulsa las teclas de los gestos" loading="lazy"></a>
+                    <figure id="foto-4">
+                        <a href="#imagen-4"><img src="imagenes/galeria/codigo-keyboard-actions.jpg" alt="Código del archivo keyboard_actions.py, que pulsa las teclas de los gestos" loading="lazy"></a>
                         <figcaption>keyboard_actions.py: teclas de los gestos <span class="fecha">12/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/codigo-config.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-config.jpg" alt="Código del archivo config.py, con los parámetros de la cámara y la detección" loading="lazy"></a>
+                    <figure id="foto-5">
+                        <a href="#imagen-5"><img src="imagenes/galeria/codigo-config.jpg" alt="Código del archivo config.py, con los parámetros de la cámara y la detección" loading="lazy"></a>
                         <figcaption>config.py: parámetros ajustables <span class="fecha">12/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/codigo-app-info.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/codigo-app-info.jpg" alt="Código del archivo app_info.py, con el nombre, el equipo y los datos del proyecto" loading="lazy"></a>
+                    <figure id="foto-6">
+                        <a href="#imagen-6"><img src="imagenes/galeria/codigo-app-info.jpg" alt="Código del archivo app_info.py, con el nombre, el equipo y los datos del proyecto" loading="lazy"></a>
                         <figcaption>app_info.py: datos del proyecto <span class="fecha">12/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/carpeta-proyecto.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/carpeta-proyecto.jpg" alt="Carpeta del proyecto en el explorador de archivos" loading="lazy"></a>
+                    <figure id="foto-7">
+                        <a href="#imagen-7"><img src="imagenes/galeria/carpeta-proyecto.jpg" alt="Carpeta del proyecto en el explorador de archivos" loading="lazy"></a>
                         <figcaption>Carpeta del proyecto <span class="fecha">12/10/2026</span></figcaption>
                     </figure>
                 </div>
@@ -233,16 +234,16 @@
                 <h3>Fotos del proceso</h3>
                 <p>Desarrollo y prueba de la página web.</p>
                 <div class="miniaturas">
-                    <figure>
-                        <a href="imagenes/galeria/proceso-html-inicial.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/proceso-html-inicial.jpg" alt="Primera versión de la página web mostrada en el navegador junto al código HTML" loading="lazy"></a>
+                    <figure id="foto-8">
+                        <a href="#imagen-8"><img src="imagenes/galeria/proceso-html-inicial.jpg" alt="Primera versión de la página web mostrada en el navegador junto al código HTML" loading="lazy"></a>
                         <figcaption>Primera versión de la página web <span class="fecha">14/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/proceso-prueba-pantalla.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/proceso-prueba-pantalla.jpg" alt="Prueba de la página web en la computadora, con el código a la izquierda y la página a la derecha" loading="lazy"></a>
+                    <figure id="foto-9">
+                        <a href="#imagen-9"><img src="imagenes/galeria/proceso-prueba-pantalla.jpg" alt="Prueba de la página web en la computadora, con el código a la izquierda y la página a la derecha" loading="lazy"></a>
                         <figcaption>Prueba de la página en pantalla <span class="fecha">14/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/proceso-publicacion.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/proceso-publicacion.jpg" alt="Publicación de la página web en GitHub, con el repositorio abierto en el navegador" loading="lazy"></a>
+                    <figure id="foto-10">
+                        <a href="#imagen-10"><img src="imagenes/galeria/proceso-publicacion.jpg" alt="Publicación de la página web en GitHub, con el repositorio abierto en el navegador" loading="lazy"></a>
                         <figcaption>Publicación en GitHub <span class="fecha">14/10/2026</span></figcaption>
                     </figure>
                 </div>
@@ -253,6 +254,7 @@
                 <div class="videos">
                     <figure>
                         <video controls preload="metadata" poster="imagenes/galeria/demo-portada.jpg">
+                            <source src="videos/demo.webm" type="video/webm">
                             <source src="videos/demo.mp4" type="video/mp4">
                             Tu navegador no puede reproducir este video.
                         </video>
@@ -260,6 +262,7 @@
                     </figure>
                     <figure>
                         <video controls preload="metadata" poster="imagenes/galeria/programa-portada.jpg">
+                            <source src="videos/programa.webm" type="video/webm">
                             <source src="videos/programa.mp4" type="video/mp4">
                             Tu navegador no puede reproducir este video.
                         </video>
@@ -271,22 +274,87 @@
                 <h3>Demo del sistema</h3>
                 <p>Una persona usa el programa en el aula: tres momentos de la demostración.</p>
                 <div class="demo-columnas">
-                    <figure>
-                        <a href="imagenes/galeria/demo-1.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/demo-1.jpg" alt="Una mano frente a la computadora, que muestra la primera diapositiva" loading="lazy"></a>
+                    <figure id="foto-11">
+                        <a href="#imagen-11"><img src="imagenes/galeria/demo-1.jpg" alt="Una mano frente a la computadora, que muestra la primera diapositiva" loading="lazy"></a>
                         <figcaption><strong>1. Primera diapositiva.</strong> La persona coloca la mano frente a la cámara de la computadora, lista para hacer el gesto. En la pantalla se ve la primera diapositiva. <span class="fecha">27/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/demo-4.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/demo-4.jpg" alt="Una mano frente a la computadora, que muestra otra diapositiva" loading="lazy"></a>
+                    <figure id="foto-12">
+                        <a href="#imagen-12"><img src="imagenes/galeria/demo-4.jpg" alt="Una mano frente a la computadora, que muestra otra diapositiva" loading="lazy"></a>
                         <figcaption><strong>2. Avanzando.</strong> Al unir los dedos, el programa pulsa la flecha derecha y la presentación pasa a la siguiente diapositiva sin tocar el teclado. <span class="fecha">27/10/2026</span></figcaption>
                     </figure>
-                    <figure>
-                        <a href="imagenes/galeria/demo-7.jpg" target="_blank" rel="noopener"><img src="imagenes/galeria/demo-7.jpg" alt="Una mano frente a la computadora, que muestra una diapositiva más avanzada" loading="lazy"></a>
+                    <figure id="foto-13">
+                        <a href="#imagen-13"><img src="imagenes/galeria/demo-7.jpg" alt="Una mano frente a la computadora, que muestra una diapositiva más avanzada" loading="lazy"></a>
                         <figcaption><strong>3. Continúa la presentación.</strong> La persona sigue cambiando de diapositiva con la mano desde su lugar, a distancia de la computadora. <span class="fecha">27/10/2026</span></figcaption>
                     </figure>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="visor" id="imagen-1">
+        <a href="#foto-1" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/codigo-main.jpg" alt="Código del archivo main.py, el punto de entrada del programa">
+    </div>
+
+    <div class="visor" id="imagen-2">
+        <a href="#foto-2" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/codigo-detection-worker.jpg" alt="Código del archivo detection_worker.py, que lee la cámara en segundo plano">
+    </div>
+
+    <div class="visor" id="imagen-3">
+        <a href="#foto-3" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/codigo-gesture-detector.jpg" alt="Código del archivo gesture_detector.py, que detecta los gestos con MediaPipe">
+    </div>
+
+    <div class="visor" id="imagen-4">
+        <a href="#foto-4" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/codigo-keyboard-actions.jpg" alt="Código del archivo keyboard_actions.py, que pulsa las teclas de los gestos">
+    </div>
+
+    <div class="visor" id="imagen-5">
+        <a href="#foto-5" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/codigo-config.jpg" alt="Código del archivo config.py, con los parámetros de la cámara y la detección">
+    </div>
+
+    <div class="visor" id="imagen-6">
+        <a href="#foto-6" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/codigo-app-info.jpg" alt="Código del archivo app_info.py, con el nombre, el equipo y los datos del proyecto">
+    </div>
+
+    <div class="visor" id="imagen-7">
+        <a href="#foto-7" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/carpeta-proyecto.jpg" alt="Carpeta del proyecto en el explorador de archivos">
+    </div>
+
+    <div class="visor" id="imagen-8">
+        <a href="#foto-8" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/proceso-html-inicial.jpg" alt="Primera versión de la página web mostrada en el navegador junto al código HTML">
+    </div>
+
+    <div class="visor" id="imagen-9">
+        <a href="#foto-9" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/proceso-prueba-pantalla.jpg" alt="Prueba de la página web en la computadora, con el código a la izquierda y la página a la derecha">
+    </div>
+
+    <div class="visor" id="imagen-10">
+        <a href="#foto-10" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/proceso-publicacion.jpg" alt="Publicación de la página web en GitHub, con el repositorio abierto en el navegador">
+    </div>
+
+    <div class="visor" id="imagen-11">
+        <a href="#foto-11" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/demo-1.jpg" alt="Una mano frente a la computadora, que muestra la primera diapositiva">
+    </div>
+
+    <div class="visor" id="imagen-12">
+        <a href="#foto-12" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/demo-4.jpg" alt="Una mano frente a la computadora, que muestra otra diapositiva">
+    </div>
+
+    <div class="visor" id="imagen-13">
+        <a href="#foto-13" class="cerrar">&larr; Volver a la página</a>
+        <img src="imagenes/galeria/demo-7.jpg" alt="Una mano frente a la computadora, que muestra una diapositiva más avanzada">
+    </div>
 
     <section id="Cierre">
         <h2>Cierre del proyecto</h2>
