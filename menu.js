@@ -23,6 +23,6 @@ const botonDescargar = document.getElementById("boton-descargar");
 
 if (botonDescargar) {
     botonDescargar.addEventListener("click", function () {
-        alert("La descarga comenzó. Cuando termine, descomprimí el archivo ZIP antes de abrir el programa.");
+        alert("La descarga comenzó. Antes de abrir el programa: clic derecho sobre el ZIP y Extraer todo. Los pasos completos están en Manual de usuario, Instalación paso a paso.");
     });
 }
